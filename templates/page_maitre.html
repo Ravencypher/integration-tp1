@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block titre %} {% endblock %} - J'aime les chats!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  {% block styles %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Averia+Sans+Libre:wght@300&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+
+  {% endblock %}
+
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</head>
+
+<body>
+  {% block header %}
+  <header>
+      <div>
+          <img src="../static/img/OanpGDb.png" alt="chat mignon dans un carton">
+          <h1>L'unique boutique <br>
+              <span>de location</span><br>
+              de chats au monde</h1>
+      </div>
+      <div>
+          <ul>
+              <li><a href="#">Partager</a></li>
+              <li><a href="#">Connexion</a></li>
+          </ul>
+          <form>
+              <input type="search" placeholder="Search" aria-label="Search">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+      </div>
+  </header>
+  {% endblock %}
+
+
+  {% block contenu %} {% endblock %}
+
+
+  {% block footer %}
+  <footer>“ Une maison sans chat est un aquarium sans poisson. ”</footer>
+  {% endblock %}
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9GN3HG2VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q9GN3HG2VN');
+  </script>
+
+</body>
+
+</html>

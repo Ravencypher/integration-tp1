@@ -24,5 +24,5 @@ function nextItem() {
 }
 
 function displayImg() {
-    carrouImg.src = "img/" + compteur + ".jpg";
+    carrouImg.src = "../static/img/" + compteur + ".jpg";
 }
