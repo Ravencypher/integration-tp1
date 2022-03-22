@@ -30,30 +30,46 @@
 <body>
   {% block header %}
   <header>
-      <div>
-          <img src="../static/img/OanpGDb.png" alt="chat mignon dans un carton">
-          <h1>L'unique boutique <br>
-              <span>de location</span><br>
-              de chats au monde</h1>
-      </div>
-      <div>
-          <ul>
-              <li><a href="#">Partager</a></li>
-              <li><a href="#">Connexion</a></li>
-          </ul>
-          <form>
-              <input type="search" placeholder="Search" aria-label="Search">
-              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-      </div>
-  </header>
+    <div>
+        <img src="../static/img/OanpGDb.png" alt="chat mignon dans un carton">
+        <h1>L'unique boutique <br>
+            <span>de location</span><br>
+            de chats au monde</h1>
+    </div>
+    <div>
+        <div><img src="../static/img/logo.png" alt="logo du site"></div>
+        <div>
+        <ul>
+            <li><a href="#">Partager</a></li>
+            <li><a href="#">Connexion</a></li>
+        </ul>
+        <form>
+            <input type="search" placeholder="Search" aria-label="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    </div>
+</header>
   {% endblock %}
 
 
 
-  {% block contenu %} {% endblock %}
+  {% block menu %}
+  <main>
+  <section>
+    <nav>
+        <ul>
+            <li><a href="/index">Accueil</a></li>
+            <li><a href="/formulaire">Formulaire</a></li>
+            <li><a href="/tableau">Tableau</a></li>
+        </ul>
+    </nav>
+</section>
+  {% endblock %}
 
 
+
+  {% block contenu %}  {% endblock %}
   
   {% block footer %}
   <footer>“ Une maison sans chat est un aquarium sans poisson. ”</footer>
