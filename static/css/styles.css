@@ -13,38 +13,108 @@ a{
     text-decoration:none;
 }
 header{
-    height:60vh;
+    height:50vh;
     width:100%;
     display: flex;
     align-items: center;
     flex-direction:column;
     justify-content: center;
     background-color:var(--bleu);
+    position:relative;
+
+}
+header::before{
+    content: '\f111';
+    color: var(--gris-c);
+    font-size:22.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position:absolute;
+    top:2%;
+    left:25%;
+    opacity:0.2;
+    z-index:0;
+}
+header::after{
+    content: '\f111';
+    color: var(--gris-c);
+    font-size:17.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position:absolute;
+    bottom:-30%;
+    right:10%;
+    opacity:0.2;
+    z-index:0;
 }
 header div:first-child {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    height:90%;
+    height:85%;
+    z-index:1;
 }
 header div:first-child  img{
-    width:35%;
+    width:42%;
 }
 header div:first-child  h1{
     font-family: 'Averia Sans Libre', cursive;
     color: var(--gris-f);
-    font-size:3rem;
+    font-size:4rem;
+    position:relative;
+    z-index:1;
+}
+header div:first-child  h1::before{
+    content: '\f1b0';
+    color: var(--gris-c);
+    font-size:7.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position:absolute;
+    top:-8%;
+    right:-5%;
+    opacity:0.2;
+    z-index:-1;
+    transform: rotate(45deg);
+}
+header div:first-child  h1::after{
+    content: '\f1b0';
+    color: var(--gris-c);
+    font-size:5.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position:absolute;
+    bottom:0%;
+    left:-7%;
+    opacity:0.2;
+    z-index:-1;
+    transform: rotate(-35deg);
 }
 header div:first-child  h1 span{
     color:var(--gris-c);
 }
 header div:last-child{
     width:100%;
-    height:10%;
+    height:15%;
+    display:flex;
+    justify-content:space-between;
+    /* margin-right:0.5rem; */
+    align-items:center;
+    z-index:1;
+    position:relative;
+}
+header div:last-child div:first-child{
+    width:10%;
+    padding-left:0.8rem;
+}
+header div:last-child div:first-child img{
+    width:100%;
+    object-fit:contain;
+}
+header div:last-child div:last-child{
+    width:90%;
     display:flex;
     justify-content:flex-end;
-    margin-right:1.5rem;
-    align-items:center;
 }
 header div:last-child ul li{
     display: inline-block;
@@ -65,11 +135,24 @@ header form input{
     font-size: 1.3rem;
     color: var(--gris-c);
 }
+header form input:focus{
+    background: var(--orange);
+}
 header form input::placeholder {
     color: var(--gris-c);
     font-family: 'Abel', sans-serif;
     text-shadow:1px 1px 1px #000;
     opacity:0.9;
+}
+header form button{
+    padding: 0.2rem;
+    width:50px;
+    background:none;
+    border:none;
+}
+header form button i{
+    font-size:1.5rem;
+    color:var(--gris-c);
 }
 main{
     display:flex;
@@ -77,11 +160,20 @@ main{
 main section:first-child{
     width:15%;
     background-color:var(--orange);
-    padding:0.5rem;
+    padding:1rem;
     display:flex;
+    justify-content: center;
+}
+main section:first-child nav{
+    width:100%;
 }
 main section nav ul{
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+main section nav ul li{
+    display:block;
 }
 main section nav ul li a{
     color: var(--gris-c);
@@ -89,22 +181,101 @@ main section nav ul li a{
     padding:5px;
     font-family: 'Abel', sans-serif;
     text-shadow:1px 1px 1px var(--gris-f);
+    transition: all 0.5s;
+}
+main section nav ul li a:hover {
+    color: var(--gris-f);
+    text-shadow: 1px 1px 1px var(--gris-c);
+}
+main section nav ul li:first-child a::before{
+    content: '\f6be';
+    color: var(--gris-f);
+    font-size:1.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-right:0.5rem;
+    text-shadow:1px 1px 1px var(--gris-c);
+    display:inline-block;
+}
+main section nav ul li:first-child a:hover::before{
+    display:inline-block;
+    animation:wobble 1s ease;
+}
+@keyframes wobble {
+    0%,100% {
+              transform: translateX(0%);
+              transform-origin: 50% 50%;
+    }
+    15% {
+              transform: translateX(-15px) rotate(-6deg);
+    }
+    30% {
+              transform: translateX(7.5px) rotate(6deg);
+    }
+    45% {
+              transform: translateX(-7.5px) rotate(-3.6deg);
+    }
+    60% {
+              transform: translateX(4.5px) rotate(2.4deg);
+    }
+    75% {
+              transform: translateX(-3px) rotate(-1.2deg);
+    }
+}
+main section nav ul li:last-child a:hover {
+    color: var(--bleu);
+    text-shadow: 1px 1px 1px var(--gris-f);
+}
+main section nav ul li:last-child a::after{
+    content: '\f1b0';
+    color: var(--gris-f);
+    font-size:1.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left:0.5rem;
+    text-shadow:1px 1px 1px var(--gris-c);
+    display:inline-block;
+    transition:all 0.8s;
+}
+main section nav ul li:last-child a:hover::after{
+    color: var(--bleu);
+    text-shadow:1px 1px 1px var(--gris-f);
+    transform:rotate(35deg);
 }
 main section:last-child{
     width:85%;
     background-color:var(--blanc);
-    /* bla */
     display:flex;
     flex-wrap: nowrap;
 }
 main section:last-child > div{
     padding:1rem;
     font-family: 'Abel', sans-serif;
+    display:flex;
+}
+main section:last-child div p{
+    margin-left:1rem;
+}
+/* MEDIAQUERIES */
+@media (max-width:700px) {
+    header::before{
+        display:none;
+    }
+    header div:first-child  img{
+        display:none;
+    }
+     main section:first-child{
+    width:25%;
+    } 
+    main section:last-child .container{
+        display:none;
+    }
 }
 /* CARROUSSEL */ 
 .container{
     max-width:350px;
     max-height:350px;
+    min-width:350px;
     margin:auto;
     border-radius:5px;
     position:relative;
@@ -122,23 +293,22 @@ main section:last-child > div{
 }
 .container img{
     max-width:350px;
-   /*  object-fit: cover; */
 }
-.btnL{
+.container button:first-of-type{
     position:absolute;
     top:50%;
     left:5px;
 }
-.btnR{
+.container button:last-of-type{
     position:absolute;
     top:50%;
     right:5px;
 }
 footer{
-    width:100%;
     background-color:var(--bleu);
     color:var(--gris-f);
     font-family: 'Averia Sans Libre', cursive;
     font-size:1.8rem;
     text-align:center;
+    padding:1.5rem;
 }
