@@ -2,8 +2,13 @@
     --orange: #f8ab56;
     --bleu: #4cd5e9;
     --gris-c: #f2f1f1;
+    --gris-mc: #E7E7E7;
+    --gris-m: #b4b4b4;
+    --gris-s: #949494;
     --gris-f: #646362;
     --blanc: #fff;
+    --vert: green;
+    --rouge: red;
     --bann: url('https://i.imgur.com/NBIySa5.png');
 }
 
@@ -16,7 +21,7 @@ a {
 }
 
 header {
-    height: 50vh;
+/*     height: 50vh; */    
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,7 +29,6 @@ header {
     justify-content: center;
     background-color: var(--bleu);
     position: relative;
-
 }
 
 header::before {
@@ -59,6 +63,7 @@ header div:first-child {
     align-items: center;
     height: 85%;
     z-index: 1;
+    padding: 1rem 0;
 }
 
 header div:first-child img {
@@ -68,7 +73,9 @@ header div:first-child img {
 header div:first-child h1 {
     font-family: 'Averia Sans Libre', cursive;
     color: var(--gris-f);
-    font-size: 4rem;
+    /* font-size: 4rem; */
+    font-size: 5.5vw;
+    line-height: 1.2em;
     position: relative;
     z-index: 1;
 }
@@ -179,6 +186,10 @@ header form button i {
 
 main {
     display: flex;
+    /* 
+    rajouter pour version mobile ? puis mettre des regles pour ce menu en dessous d'un certain seuil ? 
+    flex-direction: column;
+    */
 }
 
 main section:first-child {
@@ -290,17 +301,12 @@ main section:last-child {
     background-color: var(--blanc);
     display: flex;
     flex-wrap: nowrap;
+    padding: 1.5rem;
 }
 
-main section:last-child>div {
-    padding: 1rem;
-    font-family: 'Abel', sans-serif;
-    display: flex;
-}
-
-main section:last-child div p {
-    margin-left: 1rem;
-}
+/* main section:last-child div p {
+    margin-left: 1rem; 
+} */
 
 /* MEDIAQUERIES */
 @media (max-width:700px) {
@@ -326,7 +332,8 @@ main section:last-child div p {
     max-width: 350px;
     max-height: 350px;
     min-width: 350px;
-    margin: auto;
+    /* margin: auto; */
+    margin: 0 1.5rem 0 0;
     border-radius: 5px;
     position: relative;
     border: 1px solid var(--orange);
@@ -360,6 +367,90 @@ main section:last-child div p {
     right: 5px;
 }
 
+main section:last-child div:last-child h2 {
+    font-family: 'Averia Sans Libre', cursive;
+    color: var(--orange);
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+main section:last-child div:last-child * {
+    font-family: 'Abel', sans-serif;
+    color: var(--gris-f);
+    font-size: 1rem;
+}
+main section:last-child div:last-child p, main section:last-child div:last-child ul {
+    padding-bottom: 1rem;
+}
+main section:last-child div:last-child p a {
+    text-decoration: underline;
+    color: var(--orange);
+}
+main section:last-child div:last-child p a:hover {
+    text-decoration: underline;
+    color: var(--bleu);
+}
+main section:last-child div:last-child form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+main section:last-child div:last-child input, main section:last-child div:last-child  select {
+    background-color: var(--gris-c);
+    border: 1px solid var(--gris-m);
+    padding: 0.7rem;
+    color: var(--gris-f);
+    border-radius: 10px; 
+    outline: none;
+}
+main section:last-child div:last-child label {
+    padding: 1.25rem 0;
+}
+main section:last-child div:last-child label::after {
+  content: " *";
+}
+main section:last-child div:last-child button {
+    background-color: var(--orange);
+    box-shadow: 0.1rem 0.1rem 0.2rem var(--gris-m);
+    border-radius: 10px; 
+    border: none;
+    color: var(--blanc);
+    margin: 3rem auto 2rem;
+    padding: 0.7rem 3rem;
+}
+main section:last-child div:last-child button:hover {
+    background: var(--bleu);
+}
+main section:last-child div:last-child input[type="email"]:focus:valid {
+    border-color: var(--vert);
+}
+main section:last-child div:last-child input[type="email"]:focus:invalid{
+    border-color: var(--rouge);
+}
+main section:last-child div:last-child table {
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+}
+main section:last-child div:last-child td, main section:last-child div:last-child th {
+    border: 1px solid var(--blanc);
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+main section:last-child div:last-child thead tr {
+    background-color: var(--orange);
+}
+main section:last-child div:last-child th {
+    color: var(--blanc);
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--gris-s);
+}
+main section:last-child div:last-child tbody tr:nth-child(odd) {
+    background-color: var(--gris-c);
+}
+main section:last-child div:last-child tbody tr:nth-child(even) {
+    background-color: var(--gris-mc);
+}    
 footer {
     background-color: var(--bleu);
     color: var(--gris-f);
@@ -368,3 +459,8 @@ footer {
     text-align: center;
     padding: 1.5rem;
 }
+@media print { 
+    main section:last-child>div { 
+        display:none; 
+    }	
+}  
