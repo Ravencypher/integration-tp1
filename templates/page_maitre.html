@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fondé en 2020, Du Chat Rivari (dans vos vies) est né d’un amour passionnel de deux frères, Lucas et Maxime, pour les chats domestiques et qui, depuis leur enfance, ont le rêve de pouvoir ouvrir leur propre café à chats dans la région.
+  Freinés par les événements récents et les restrictions sanitaires. mais ne voulant pas laisser de côté leur brulante envie de partager leur passion, ils se sont dits que si les gens ne pouvaient pas venir jusqu'aux chats, ce seraient les chats qui viendraient à eux.
+  Ainsi naquit Du Chat Rivari (dans vos vies) !">
+
+  <title>{% block titre %} {% endblock %} - J'aime les chats!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  {% block styles %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Averia+Sans+Libre:wght@300&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+
+  {% endblock %}
+
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</head>
+
+<body>
+  {% block header %}
+  <header>
+    <div>
+        <img src="../static/img/cat-bann.png" alt="chat mignon sur le dos">
+        <h1>L'unique boutique <br>
+            <span>de location</span><br>
+            de chats au monde</h1>
+    </div>
+    <div>
+        <div><img src="../static/img/logo.png" alt="logo du site"></div>
+        <div>
+        <ul>
+            <li><a href="#">Partager</a></li>
+            <li><a href="#">Connexion</a></li>
+        </ul>
+        <form>
+            <input type="search" placeholder="Search" aria-label="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    </div>
+</header>
+  {% endblock %}
+
+
+
+  {% block menu %}
+  <main>
+  <section>
+    <nav>
+        <ul>
+            <li><a href="/index">Accueil</a></li>
+            <li><a href="/formulaire">Renseignements</a></li>
+            <li><a href="/tableau">Nos Matous</a></li>
+        </ul>
+    </nav>
+</section>
+  {% endblock %}
+
+
+
+  {% block contenu %}  {% endblock %}
+  
+  {% block footer %}
+  <footer>“ Une maison sans chat est un aquarium sans poisson. ”</footer>
+  {% endblock %}
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJCH9X55L5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FJCH9X55L5');
+</script>
+
+</body>
+
+</html>

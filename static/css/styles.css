@@ -1,0 +1,465 @@
+:root {
+    --orange: #f8ab56;
+    --bleu: #4cd5e9;
+    --gris-c: #f2f1f1;
+    --gris-mc: #E7E7E7;
+    --gris-m: #b4b4b4;
+    --gris-s: #949494;
+    --gris-f: #646362;
+    --blanc: #fff;
+    --vert: #008000;
+    --rouge: #ff0000;
+    --bann: url('https://i.imgur.com/NBIySa5.png');
+}
+
+* {
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 50vh;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bleu);
+    position: relative;
+}
+
+header::before {
+    content: '\f111';
+    color: var(--gris-c);
+    font-size: 22.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+header::after {
+    content: '\f111';
+    color: var(--gris-c);
+    font-size: 17.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: -30%;
+    right: 10%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+header div:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85%;
+    z-index: 1;
+  
+}
+
+header div:first-child img {
+    width: 42%;
+}
+
+header div:first-child h1 {
+    font-family: 'Averia Sans Libre', cursive;
+    color: var(--gris-f);
+    font-size: 4rem;
+    line-height: 1.2em;
+    position: relative;
+    z-index: 1;
+}
+
+header div:first-child h1::before {
+    content: '\f1b0';
+    color: var(--gris-c);
+    font-size: 7.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: -8%;
+    right: -5%;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+header div:first-child h1::after {
+    content: '\f1b0';
+    color: var(--gris-c);
+    font-size: 5.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 0%;
+    left: -7%;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(-35deg);
+}
+
+header div:first-child h1 span {
+    color: var(--gris-c);
+}
+
+header div:last-child {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+header div:last-child div:first-child {
+    width: 10%;
+    padding-left: 0.8rem;
+}
+
+header div:last-child div:first-child img {
+    width: 100%;
+    object-fit: contain;
+}
+
+header div:last-child div:last-child {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header div:last-child ul li {
+    display: inline-block;
+    margin-right: 2.5rem;
+}
+
+header div:last-child ul li a {
+    color: var(--gris-c);
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--gris-f);
+}
+
+header form input {
+    border-radius: 0.5rem;
+    background: none;
+    border: 1px solid var(--gris-c);
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    color: var(--gris-c);
+}
+
+header form input:focus {
+    background: var(--orange);
+}
+
+header form input::placeholder {
+    color: var(--gris-c);
+    font-family: 'Abel', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    opacity: 0.9;
+}
+
+header form button {
+    padding: 0.2rem;
+    width: 50px;
+    background: none;
+    border: none;
+}
+
+header form button i {
+    font-size: 1.5rem;
+    color: var(--gris-c);
+}
+
+main {
+    display: flex;
+}
+
+main section:first-child {
+    width: 15%;
+    background-color: var(--orange);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    z-index:1;
+}
+
+main section:first-child nav {
+    width: 100%;
+}
+
+main section nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main section nav ul li {
+    display: block;
+}
+
+main section nav ul li a {
+    color: var(--gris-c);
+    font-size: 1.5rem;
+    padding: 5px;
+    font-family: 'Abel', sans-serif;
+    text-shadow: 1px 1px 1px var(--gris-f);
+    transition: all 0.5s;
+}
+
+main section nav ul li a:hover {
+    color: var(--gris-f);
+    text-shadow: 1px 1px 1px var(--gris-c);
+}
+
+main section nav ul li:first-child a::before {
+    content: '\f6be';
+    color: var(--gris-f);
+    font-size: 1.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-right: 0.5rem;
+    text-shadow: 1px 1px 1px var(--gris-c);
+    display: inline-block;
+}
+
+main section nav ul li:first-child a:hover::before {
+    display: inline-block;
+    animation: wobble 1s ease;
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-15px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(7.5px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-7.5px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(4.5px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-3px) rotate(-1.2deg);
+    }
+}
+
+main section nav ul li:last-child a:hover {
+    color: var(--bleu);
+    text-shadow: 1px 1px 1px var(--gris-f);
+}
+
+main section nav ul li:last-child a::after {
+    content: '\f1b0';
+    color: var(--gris-f);
+    font-size: 1.5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 0.5rem;
+    text-shadow: 1px 1px 1px var(--gris-c);
+    display: inline-block;
+    transition: all 0.8s;
+}
+
+main section nav ul li:last-child a:hover::after {
+    color: var(--bleu);
+    text-shadow: 1px 1px 1px var(--gris-f);
+    transform: rotate(35deg);
+}
+
+main section:last-child {
+    width: 85%;
+    background-color: var(--blanc);
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1.5rem;
+    z-index:1;
+}
+
+/* MEDIAQUERIES */
+@media (max-width:700px) {
+    header::before {
+        display: none;
+    }
+
+    header div:first-child img {
+        display: none;
+    }
+
+    main section:first-child {
+        width: 25%;
+    }
+
+    main section:last-child .container {
+        display: none;
+    }
+}
+
+/* CARROUSSEL */
+.container {
+    max-width: 350px;
+    max-height: 350px;
+    min-width: 350px;
+    margin: 0 1.5rem 0 0;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid var(--orange);
+    overflow: hidden;
+}
+.container button {
+    border-radius: 50%;
+    border: 1px solid var(--orange);
+    width: 30px;
+    height: 30px;
+    background-color: var(--gris-c);
+    color: var(--orange);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container img {
+    max-width: 350px;
+}
+
+.container button:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+
+.container button:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+}
+
+main section:last-child div:nth-of-type(2) p:first-child::first-letter{
+    color:var(--orange);
+    font-family: 'Averia Sans Libre', cursive;
+    font-size:1.3rem;
+}
+
+main section:last-child div h2 {
+    font-family: 'Averia Sans Libre', cursive;
+    color: var(--orange);
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+main section:last-child div{
+    font-family: 'Abel', sans-serif;
+    color: var(--gris-f);
+    font-size: 1rem;
+}
+main section:last-child div p, main section:last-child div ul {
+    padding-bottom: 1rem;
+}
+main section:last-child div p a {
+    text-decoration: underline;
+    color: var(--orange);
+}
+main section:last-child div p a:hover {
+    text-decoration: underline;
+    color: var(--bleu);
+}
+main section:last-child div form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+main section:last-child div input, main section:last-child div  select {
+    background-color: var(--gris-c);
+    border: 1px solid var(--gris-m);
+    padding: 0.7rem;
+    color: var(--gris-f);
+    border-radius: 10px; 
+    outline: none;
+}
+main section:last-child div label {
+    padding: 1.25rem 0;
+}
+main section:last-child div label::after {
+  content: " *";
+}
+main section:last-child div form button {
+    background-color: var(--orange);
+    box-shadow: 0.1rem 0.1rem 0.2rem var(--gris-m);
+    border-radius: 10px; 
+    border: none;
+    color: var(--blanc);
+    margin: 3rem auto 2rem;
+    padding: 0.7rem 3rem;
+}
+main section:last-child div form button:hover {
+    background: var(--bleu);
+}
+main section:last-child div input[type="email"]:focus:valid {
+    border-color: var(--vert);
+}
+main section:last-child div input[type="email"]:focus:invalid{
+    border-color: var(--rouge);
+}
+main section:last-child div table {
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+}
+main section:last-child div td, main section:last-child div th {
+    border: 1px solid var(--blanc);
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+main section:last-child div thead tr {
+    background-color: var(--orange);
+}
+main section:last-child div th {
+    color: var(--blanc);
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--gris-s);
+}
+main section:last-child div tbody tr:nth-child(odd) {
+    background-color: var(--gris-c);
+}
+main section:last-child div tbody tr:nth-child(even) {
+    background-color: var(--gris-mc);
+}    
+
+@media print{
+    header, nav, footer{
+        display:none;
+    }
+}
+footer {
+    background-color: var(--bleu);
+    color: var(--gris-f);
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1.5rem;
+} 

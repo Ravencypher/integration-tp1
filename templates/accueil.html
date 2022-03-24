@@ -1,0 +1,27 @@
+{% extends "page_maitre.html" %}
+
+{% block titre %}
+Accueil
+{% endblock %}
+
+{% block contenu %}
+
+    <section>
+        <div id="carrou" class="container">
+            <div id="item">
+                <img id="carrouImg" alt="chat trop mignon" src="../static/img/0.jpg">
+            </div>  
+            <button id="prev"><i class="fas fa-chevron-circle-left"></i></button>
+            <button id="next"><i class="fas fa-chevron-circle-right"></i></button>
+        </div>
+        <div>
+            <p>Fondé en 2020, Du Chat Rivari (dans vos vies) est né d’un amour passionnel de deux frères, Lucas et Maxime, pour les chats domestiques et qui, depuis leur enfance, ont le rêve de pouvoir ouvrir leur propre café à chats dans la région.</p> 
+            <p>Freinés par les événements récents et les restrictions sanitaires. mais ne voulant pas laisser de côté leur brulante envie de partager leur passion, ils se sont dits que si les gens ne pouvaient pas venir jusqu'aux chats, ce seraient les chats qui viendraient à eux.</p> 
+            <p>Ainsi naquit Du Chat Rivari (dans vos vies) ! </p> 
+            <p>Situés dans la région de Québec et Montréal, nous proposons à la location des chats à aimer et à caliner pour le temps d'une demi-journée, d'une journée ou même pour plusieurs jours.</p> 
+            <p>N'hésite pas à venir à la rencontre de<a href="./tableau"> nos petits pensionnaires</a>.</p>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
