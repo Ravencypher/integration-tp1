@@ -2,8 +2,13 @@
     --orange: #f8ab56;
     --bleu: #4cd5e9;
     --gris-c: #f2f1f1;
+    --gris-mc: #E7E7E7;
+    --gris-m: #b4b4b4;
+    --gris-s: #949494;
     --gris-f: #646362;
     --blanc: #fff;
+    --vert: #008000;
+    --rouge: #ff0000;
     --bann: url('https://i.imgur.com/NBIySa5.png');
 }
 
@@ -11,12 +16,13 @@
     margin: 0;
 }
 
+
 a {
     text-decoration: none;
 }
 
 header {
-    height: 50vh;
+    height: 50vh;    
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,7 +30,6 @@ header {
     justify-content: center;
     background-color: var(--bleu);
     position: relative;
-
 }
 
 header::before {
@@ -59,6 +64,7 @@ header div:first-child {
     align-items: center;
     height: 85%;
     z-index: 1;
+  
 }
 
 header div:first-child img {
@@ -69,6 +75,7 @@ header div:first-child h1 {
     font-family: 'Averia Sans Libre', cursive;
     color: var(--gris-f);
     font-size: 4rem;
+    line-height: 1.2em;
     position: relative;
     z-index: 1;
 }
@@ -110,7 +117,6 @@ header div:last-child {
     height: 15%;
     display: flex;
     justify-content: space-between;
-    /* margin-right:0.5rem; */
     align-items: center;
     z-index: 1;
     position: relative;
@@ -187,6 +193,7 @@ main section:first-child {
     padding: 1rem;
     display: flex;
     justify-content: center;
+    z-index:1;
 }
 
 main section:first-child nav {
@@ -290,16 +297,8 @@ main section:last-child {
     background-color: var(--blanc);
     display: flex;
     flex-wrap: nowrap;
-}
-
-main section:last-child>div {
-    padding: 1rem;
-    font-family: 'Abel', sans-serif;
-    display: flex;
-}
-
-main section:last-child div p {
-    margin-left: 1rem;
+    padding: 1.5rem;
+    z-index:1;
 }
 
 /* MEDIAQUERIES */
@@ -326,7 +325,7 @@ main section:last-child div p {
     max-width: 350px;
     max-height: 350px;
     min-width: 350px;
-    margin: auto;
+    margin: 0 1.5rem 0 0;
     border-radius: 5px;
     position: relative;
     border: 1px solid var(--orange);
@@ -360,6 +359,102 @@ main section:last-child div p {
     right: 5px;
 }
 
+main section:last-child div:nth-of-type(2) p:first-child::first-letter{
+    color:var(--orange);
+    font-family: 'Averia Sans Libre', cursive;
+    font-size:1.3rem;
+}
+
+main section:last-child div h2 {
+    font-family: 'Averia Sans Libre', cursive;
+    color: var(--orange);
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+main section:last-child div{
+    font-family: 'Abel', sans-serif;
+    color: var(--gris-f);
+    font-size: 1rem;
+}
+main section:last-child div p, main section:last-child div ul {
+    padding-bottom: 1rem;
+}
+main section:last-child div p a {
+    text-decoration: underline;
+    color: var(--orange);
+}
+main section:last-child div p a:hover {
+    text-decoration: underline;
+    color: var(--bleu);
+}
+main section:last-child div form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+main section:last-child div input, main section:last-child div  select {
+    background-color: var(--gris-c);
+    border: 1px solid var(--gris-m);
+    padding: 0.7rem;
+    color: var(--gris-f);
+    border-radius: 10px; 
+    outline: none;
+}
+main section:last-child div label {
+    padding: 1.25rem 0;
+}
+main section:last-child div label::after {
+  content: " *";
+}
+main section:last-child div form button {
+    background-color: var(--orange);
+    box-shadow: 0.1rem 0.1rem 0.2rem var(--gris-m);
+    border-radius: 10px; 
+    border: none;
+    color: var(--blanc);
+    margin: 3rem auto 2rem;
+    padding: 0.7rem 3rem;
+}
+main section:last-child div form button:hover {
+    background: var(--bleu);
+}
+main section:last-child div input[type="email"]:focus:valid {
+    border-color: var(--vert);
+}
+main section:last-child div input[type="email"]:focus:invalid{
+    border-color: var(--rouge);
+}
+main section:last-child div table {
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+}
+main section:last-child div td, main section:last-child div th {
+    border: 1px solid var(--blanc);
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+main section:last-child div thead tr {
+    background-color: var(--orange);
+}
+main section:last-child div th {
+    color: var(--blanc);
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--gris-s);
+}
+main section:last-child div tbody tr:nth-child(odd) {
+    background-color: var(--gris-c);
+}
+main section:last-child div tbody tr:nth-child(even) {
+    background-color: var(--gris-mc);
+}    
+
+@media print{
+    header, nav, footer{
+        display:none;
+    }
+}
 footer {
     background-color: var(--bleu);
     color: var(--gris-f);
@@ -367,4 +462,4 @@ footer {
     font-size: 1.8rem;
     text-align: center;
     padding: 1.5rem;
-}
+} 

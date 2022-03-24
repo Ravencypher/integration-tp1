@@ -8,9 +8,34 @@ Formulaire
 
 <section>
     <div>
-        <p>
-            Contenu de formulaire super awesome !
-        </p>
+        <div>
+            <h2>Demande de renseignements</h2>
+            <p>Tu souhaites louer un chat ? N'hésite pas à remplir ce formulaire pour obtenir plus d'informations à son sujet. Nous nous ferons un plaisir de te répondre dans les plus brefs délais !<br> <br> 
+            Si tu ne sais pas encore quel chat choisir, n'hésite pas à <a href="./tableau">consulter la liste de nos chats disponibles</a>.</p>
+            <form  method="post" action="https://philippefleury.com/backend.php">
+                <label for="choixchat">Sélectionner un chat</label>
+                <select name="choixchat" id="choixchat" required>
+                    <option value="">&nbsp;</option>
+                    <optgroup label="Région de Montréal">
+                        <option value="chamallow">Chamallow</option>
+                        <option value="chapardeur">Chapardeur</option>
+                        <option value="chapristi">Chapristi</option>
+                        <option value="chalumeau">Chalumeau</option>
+                    </optgroup>
+                    <optgroup label="Région de Québec">
+                        <option value="chatouille">Chatouille</option>
+                        <option value="charlotte">Charlotte</option>
+                        <option value="charivari">Charivari</option>
+                    </optgroup>
+                </select>
+                <label for="periode">Période souhaitée</label>
+                <input type="text" name="periode" id="periode" required="required">
+                <label for="email">Adresse courriel</label>
+                <input type="email" name="email" id="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+
     </div>
 </section>
 </main>
